@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-body" >
+            <div class="mb-3">
+                <label for="nombre" class="form-label">NOMBRE:</label>
+                <input type="" class="form-control" id="nombre" placeholder="Nombre" [(ngModel)] = "nombre" >
+            </div>
+    
+            <div class="mb-3">
+                <label for="apellido" class="form-label">APELLIDO:</label>
+                <input type="" class="form-control" id="apellido" placeholder="Apellidos" [(ngModel)] = "apellido" >
+            </div>
+    
+            <div class="mb-3">
+                <label for="email" class="form-label">EMAIL:</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" [(ngModel)] = "email" >
+            </div>
+    
+            <div class="mb-3">
+                <label for="telefono" class="form-label">NUMERO DE TELEFONO:</label>
+                <input type="" class="form-control" id="telefono" placeholder="Numero de telefono" [(ngModel)] = "telefono" >
+            </div>
+    
+            <div class="mb-3">
+                <label for="Ciudad" class="form-label">CIUDAD:</label>
+                <input type="" class="form-control" id="Ciudad" placeholder="Ciudad" [(ngModel)] = "ciudad" >
+            </div>
+    
+            <div class="mb-3">
+                <label for="Pais" class="form-label">PAIS:</label>
+                <input type="" class="form-control" id="Pais" placeholder="Pais" [(ngModel)] = "pais" formControlName="pai">
+            </div>
+
+            <div class="mb-3">
+                <a class="btn btn-primary" routerLink="/perfil" (click)="save()">Crear Perfil</a>
+            </div>
+        </div>
+    </div>
+</div>
