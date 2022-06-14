@@ -20,6 +20,4 @@ export class AppComponent {
   create(registro: any){
     return this.http.post('https://62a758fc97b6156bff8cef5c.mockapi.io/api/prueba/prueba_tecnica', registro);
   }
-
-
 }

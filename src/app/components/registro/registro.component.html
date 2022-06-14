@@ -28,11 +28,15 @@
     
             <div class="mb-3">
                 <label for="Pais" class="form-label">PAIS:</label>
-                <input type="" class="form-control" id="Pais" placeholder="Pais" [(ngModel)] = "pais" formControlName="pai">
+                <input type="" class="form-control" id="Pais" placeholder="Pais" [(ngModel)] = "pais" >
             </div>
 
             <div class="mb-3">
-                <a class="btn btn-primary" routerLink="/perfil" (click)="save()">Crear Perfil</a>
+                <a class="btn btn-primary" routerLink="/perfil" >ver ultimo Perfil</a>
+            </div>
+
+            <div class="mb-3">
+                <a class="btn btn-primary"  (click)="save()">guardar Perfil</a>
             </div>
         </div>
     </div>

@@ -1,6 +1,5 @@
-import { getLocaleCurrencyCode } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder} from '@angular/forms';
 import { AppComponent } from 'src/app/app.component';
 
 @Component({
@@ -11,7 +10,6 @@ import { AppComponent } from 'src/app/app.component';
 export class RegistroComponent implements OnInit {
 
 //variables para formulario
-
 nombre = ''
 apellido = ''
 email = ''
@@ -19,16 +17,9 @@ telefono = ''
 ciudad = ''
 pais = ''
 registro: any[] = [];
-
 objeto = {};
 
-
-   
-
-
-constructor(private appcomponent: AppComponent, private fb: FormBuilder) { 
-  
-}
+constructor(private appcomponent: AppComponent, private fb: FormBuilder) { }
 
 json(){
   this.registro.push({
@@ -39,29 +30,26 @@ json(){
     "ciudad": this.ciudad,
     "pais": this.pais
 });
-
 }
 
 ngOnInit(): void {
   this.getAll();  
 }
+
 getAll(){
   this.appcomponent.getAll().subscribe((perfiles: any) => {
-    this.registro;
+    this.registro; 
 })
-
 }
 
 save(){
-  const values = this.registro;
   this.json();
-  console.log('values', values);
-
+  const values = this.registro [0];
   this.appcomponent.create(values).subscribe(() => {
-    this.getAll();
-  }
-  
-  )
+    setTimeout(()=>{  
+      this.getAll();
+    }, 2000);
+    
+  })
 }
-
 }
